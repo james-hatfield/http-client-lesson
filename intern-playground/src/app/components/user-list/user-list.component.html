@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" *ngFor="let user of users">
+    <div class="col">
+      <app-user (clicked)="onUserClicked($event)" [user]="user"></app-user>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <button *ngIf="!displayForm" (click)="onAddUser()" class="btn btn-lg btn-primary my-2">Add User</button>
+    </div>
+  </div>
+</div>
