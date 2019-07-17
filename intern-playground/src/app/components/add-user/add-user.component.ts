@@ -21,7 +21,7 @@ export class AddUserComponent implements OnInit {
   }
 
   onSubmit(){
-    let newUser = new User(this.addUserForm.value.name, 3, this.addUserForm.value.description);
+    let newUser = new User(this.addUserForm.value.name, null, this.addUserForm.value.description);
     this.userService.addUser(newUser);
   }
 

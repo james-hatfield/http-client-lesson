@@ -8,6 +8,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserComponent } from './components/user/user.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import{ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import{ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

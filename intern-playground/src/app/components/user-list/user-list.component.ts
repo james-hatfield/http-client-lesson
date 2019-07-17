@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { User } from "src/app/models/user";
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,7 +11,9 @@ export class UserListComponent implements OnInit {
   displayForm: boolean = false;
   users: User[];
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) {
+
+  }
 
   ngOnInit() {
     this.users = this.userService.getUsers();
@@ -24,7 +26,7 @@ export class UserListComponent implements OnInit {
   }
 
   onUserClicked(user: User) {
-    console.log(user);
+    this.userService.deleteUser(user._id);
   }
 
   onAddUser() {
